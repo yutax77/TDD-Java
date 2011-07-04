@@ -1,6 +1,7 @@
 package com.yutax77;
 
-import org.testng.annotations;
+import static org.testng.Assert.*;
+import org.testng.annotations.*;
 
 /**
  * Unit test for simple App.
