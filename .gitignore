@@ -1,2 +1,7 @@
 target
 *.class
+.classpath
+.settings
+.project
+test-output
+.*.swp
