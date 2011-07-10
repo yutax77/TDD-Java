@@ -13,17 +13,17 @@ public class DollarTest {
   
   @Test
   public void testFrancMultiplication() {
-	  Franc five = new Franc(5);
-	  assertEquals(five.times(2), new Franc(10));
-	  assertEquals(five.times(3), new Franc(15));
+	  Money five = Money.franc(5);
+	  assertEquals(five.times(2), Money.franc(10));
+	  assertEquals(five.times(3), Money.franc(15));
   }
   
   @Test
   public void testEquality() {
 	  assertTrue(Money.dollar(5).equals(Money.dollar(5)));
 	  assertFalse(Money.dollar(5).equals(Money.dollar(6)));
-	  assertTrue(new Franc(5).equals(new Franc(5)));
-	  assertFalse(new Franc(5).equals(new Franc(6)));
-	  assertFalse(new Franc(5).equals(Money.dollar(5)));
+	  assertTrue(Money.franc(5).equals(Money.franc(5)));
+	  assertFalse(Money.franc(5).equals(Money.franc(6)));
+	  assertFalse(Money.franc(5).equals(Money.dollar(5)));
   }
 }
