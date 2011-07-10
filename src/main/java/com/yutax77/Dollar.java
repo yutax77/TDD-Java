@@ -1,6 +1,6 @@
 package com.yutax77;
 
-public class Dollar {
+public class Dollar extends Money {
 	private int amount; 
 	
 	Dollar(int amount){
