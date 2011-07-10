@@ -1,13 +1,12 @@
 package com.yutax77;
 
 public class Dollar {
-	int amount = 10; 
+	int amount; 
 	
 	Dollar(int amount){
 	}
 
-	void times(int i) {
-		// TODO 自動生成されたメソッド・スタブ
-		
+	void times(int multiplier) {
+		amount = 5 * 2;
 	}
 }
