@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 public class DollarTest {
   @Test
   public void testMultiplication() {
-	  Dollar five = new Dollar(5);
-	  assertEquals(five.times(2), new Dollar(10));
-	  assertEquals(five.times(3), new Dollar(15));
+	  Money five = Money.dollar(5);
+	  assertEquals(five.times(2), Money.dollar(10));
+	  assertEquals(five.times(3), Money.dollar(15));
   }
   
   @Test
@@ -20,10 +20,10 @@ public class DollarTest {
   
   @Test
   public void testEquality() {
-	  assertTrue(new Dollar(5).equals(new Dollar(5)));
-	  assertFalse(new Dollar(5).equals(new Dollar(6)));
+	  assertTrue(Money.dollar(5).equals(Money.dollar(5)));
+	  assertFalse(Money.dollar(5).equals(Money.dollar(6)));
 	  assertTrue(new Franc(5).equals(new Franc(5)));
 	  assertFalse(new Franc(5).equals(new Franc(6)));
-	  assertFalse(new Franc(5).equals(new Dollar(5)));
+	  assertFalse(new Franc(5).equals(Money.dollar(5)));
   }
 }
