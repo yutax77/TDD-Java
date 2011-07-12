@@ -1,8 +1,11 @@
 package com.yutax77;
 
 public class Franc extends Money {
+	private String currency;
+	
 	Franc(int amount){
 		this.amount = amount;
+		currency = "CHF";
 	}
 
 	Money times(int multiplier) {
@@ -11,6 +14,6 @@ public class Franc extends Money {
 
 	@Override
 	String currency() {
-		return "CHF";
+		return currency;
 	}
 }
