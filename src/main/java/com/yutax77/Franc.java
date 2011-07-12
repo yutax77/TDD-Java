@@ -1,19 +1,12 @@
 package com.yutax77;
 
 public class Franc extends Money {
-	private String currency;
-	
-	Franc(int amount){
+	Franc(int amount, String currency){
 		this.amount = amount;
-		currency = "CHF";
+		this.currency = "CHF";
 	}
 
 	Money times(int multiplier) {
-		return new Franc(amount * multiplier);
-	}
-
-	@Override
-	String currency() {
-		return currency;
+		return new Franc(amount * multiplier, null);
 	}
 }
