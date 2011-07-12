@@ -1,6 +1,6 @@
 package com.yutax77;
 
-abstract class Money {
+class Money {
 	protected int amount;
 	protected String currency;
 		
@@ -9,10 +9,17 @@ abstract class Money {
 		this.currency = currency;
 	}
 	
-	abstract Money times(int multiplier);
+	Money times(int multiplier) {
+		return null;
+	}
 	
 	String currency() {
 		return currency;
+	}
+	
+	@Override
+	public String toString() {
+		return amount + " " + currency;
 	}
 	
 	@Override
