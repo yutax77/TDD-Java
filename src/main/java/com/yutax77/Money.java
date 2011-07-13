@@ -1,6 +1,6 @@
 package com.yutax77;
 
-class Money {
+class Money implements Expression {
 	protected int amount;
 	protected String currency;
 		
@@ -36,7 +36,7 @@ class Money {
 		return new Money(amount, "CHF");
 	}
 
-	Money plus(Money dollar) {
+	Expression plus(Money dollar) {
 		return new Money(amount + dollar.amount, currency);
 	}
 }
