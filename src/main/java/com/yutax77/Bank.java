@@ -1,9 +1,10 @@
 package com.yutax77;
 
-import java.util.Hashtable;
+import java.util.HashMap;
+import java.util.Map;
 
 class Bank {
-	private Hashtable rates = new Hashtable();
+	private Map<Pair, Integer> rates = new HashMap<Pair, Integer>();
 	
 	Money reduce(Expression source, String to) {
 		return source.reduce(this, to);
@@ -11,8 +12,7 @@ class Bank {
 
 	int rate(String from, String to) {
 		if(from.equals(to)) return 1;
-		Integer rate = (Integer) rates.get(new Pair(from, to));
-		return rate.intValue();
+		return rates.get(new Pair(from, to));
 	}
 	
 	void addRate(String from, String to, int rate) {
